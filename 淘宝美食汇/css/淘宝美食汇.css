@@ -1,0 +1,59 @@
+
+
+
+    *{
+    	margin: 0 ;
+    }
+    .wrap{
+    	width: 1200px;
+    	height: 360px;
+    	background-color: darkseagreen;
+        margin: 100px auto;
+    }
+    
+    .wrap ul{
+    	/*弹性盒子模型*/
+    	
+    	/*开启弹性盒模型   各个盒子排列一行*/
+    	display: flex;
+    	/*强制换行*/
+    	flex-wrap: wrap;
+    	/*左右均分 相等间距*/
+    	justify-content: space-around;
+    	/*上下居中*/
+    	align-items: center;
+    	
+    	
+    	padding-left: 0px;
+    	width: 1200px;
+    	height: 360px;
+    	background-color: pink;
+    	list-style-type: none;
+    }
+    
+    .wrap ul li{
+    	
+    	width: 360px;
+    	height: 139px;
+    	border: 5px solid white;
+    }
+    .wrap ul li img{
+    	width: 360px;
+    	height: 139px;
+    }
+    .title{
+    	width: 360px;
+    	height: 139px;
+    	background-color: rgba(255,255,255,0.6);/*red红色，green绿色，blue蓝色,a透明度*/
+    	/*变换                   位移                        像素             缩放（<1缩小，>1放大）*/
+    	transform: translateY(-143px) scale(0);
+        /*过渡时间*/
+        transition: 1s;
+   }
+    .title h1{
+    	 text-align: center;
+    	 line-height: 139px;
+    }
+    .wrap ul li:hover .title{/*伪类 ：hover-鼠标悬停事件*/
+    	transform: translateY(-143px) scale(1);
+    }
