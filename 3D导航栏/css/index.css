@@ -1,0 +1,60 @@
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+ul{
+	/*让li水平排列*/
+	display: flex;
+}
+ul li {
+	position: relative;
+	list-style: none;
+	width: 80px;
+	height: 30px;
+	cursor: pointer;
+	transform-style: preserve-3d;
+	transition: 1s;
+}
+ul li:hover{
+	transform: rotateX(90deg);
+}
+ul li:hover div:first-child{
+	background-color: #51938f;
+	background-size: 5px 5px;
+	background-position: 30px 30px ;
+	background-image: linear-gradient(45deg,#478480 25%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 75%,#478480 75%,#478480);
+	
+}
+ul li div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	line-height: 30px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+}
+ul li div:first-child{
+	background-color: #74adaa;
+	transform: translateZ(15px);
+}
+ul li div:last-child{
+	background-color: #51938f;
+	background-size: 5px 5px;
+	background-position: 30px 30px ;
+	background-image: linear-gradient(45deg,#478480 25%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 75%,#478480 75%,#478480);
+	/*让第二个面往下移动25px*/
+	transform: translateY(15px) rotateX(-90deg);
+}

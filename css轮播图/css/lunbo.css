@@ -1,0 +1,65 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.banner{
+	position: relative;
+	width: 500px;
+	height:300px ;
+	margin: 100px auto; 
+	background-color: pink;
+	
+	overflow: hidden;/*超出隐藏*/
+}
+ul{
+	width: 2000px;
+	height: 300px;
+	background-color: lightgreen;
+    position:absolute;
+    top:50;
+    left: 0;
+    
+    animation: run 9s infinite;
+}
+li{
+	float: left;
+	list-style-type: none;
+	width: 500px;
+	height: 400px;
+	background-size: 500px 400px;
+	
+}
+li:nth-child(1){
+	background-image: url(../img/1.jpg);
+}
+li:nth-child(2){
+	background-image: url(../img/2.jpg);
+}
+
+li:nth-child(3){
+	background-image: url(../img/3.jpg);
+}
+
+li:nth-child(4){
+	background-image: url(../img/1.jpg);
+}
+ /*动画*/
+ @keyframes run{
+ 	0%{
+ 		left: 0;
+ 		
+ 	}
+ 	35%{
+ 		left: -500px;
+ 		
+ 	}
+ 	70%{
+ 		left: -1000px;
+ 		
+ 	}
+ 	100%{
+ 		left: -1500px;
+ 		
+ 	}
+ 	
+ 
