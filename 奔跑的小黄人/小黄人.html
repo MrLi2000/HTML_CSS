@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<meta name = "keywords" content="乖乖 ,乖乖老师" >
+		<meta name = "description" content=" 这是乖乖老师的讲课网页">
+		<title>六星的乖乖</title>
+		<style>
+			body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd{
+				margin:0;
+				padding:0;
+			}
+			a{
+				text-decoration:none;
+			}
+			ul,ol{
+				list-style:none;
+			}
+			body{
+				background-color: purple;
+			}
+			.wrap{
+				position: relative;
+				width: 200px;
+				height: 300px;
+				margin:100px;
+				/* border:1px solid red; */
+				animation: run 10s infinite linear;
+			}
+			.head{
+				width: 30px;
+				height: 30px;
+				border:4px solid #fff;
+				border-radius:50%;
+				transform-origin:bottom center;
+				animation: head 1s infinite linear alternate;
+			}
+			.head:before{
+				position: absolute;
+				top:-2px;
+				left:-10px;
+				content:"";
+				width: 50px;
+				height: 15px;
+				background-color: #0f0;
+				border-radius: 15px 15px 0 0;
+			}
+			.head:after{
+				position: absolute;
+				top:-10px;
+				left:5px;
+				content:"";
+				width: 20px;
+				height: 15px;
+				background-color:#0f0;
+				border-radius: 15px 15px 0 0;
+			}
+			.body{
+				position: absolute;
+				top:44px;
+				left:12px;
+				width: 15px;
+				height: 75px;
+				background-color: #fff;
+			}
+			.body:after{
+				position: absolute;
+				top:-4px;
+				left:4px;
+				content:"";
+				width: 8px;
+				height: 5px;
+				background-color: #fff;
+			}
+			.hand{
+				position: absolute;
+				top:50px;
+				left:14px;
+				width: 10px;
+				height: 60px;
+				background-color: #f63;
+				border-radius: 5px 5px 0 0 ;
+				transform-origin:top center;
+				animation: hand 1s infinite linear alternate;
+			}
+			.left-hand{
+				z-index:-1;
+				animation-delay:1s;
+			}
+			.hand:after{
+				position: absolute;
+				bottom:-5px;
+				left:-1px;
+				content:"";
+				width: 12px;
+				height: 12px;
+				background-color: #f10;
+				border-radius:50%;
+			}
+			.foot{
+				z-index:-1;
+				position: absolute;
+				top:115px;
+				left:13px;
+				width: 13px;
+				height: 100px;
+				background-color: #060;
+				transform-origin:top center;
+				animation:foot 1s infinite linear alternate;
+
+			}
+			.left-foot{
+				animation-delay:1s;
+			}
+			.foot:after{
+				position: absolute;
+				bottom:-5px;
+				left:-2px;
+				content:"";
+				width: 25px;
+				height: 15px;
+				background-color: #000;
+				border-radius: 8px 15px 0 0;
+			
+			}
+			@keyframes head{
+				0%{
+					transform:rotate(10deg);
+				}
+				50%{
+					transform:rotate(0deg);
+				}
+				100%{
+					transform:rotate(-10deg);
+				}
+			}
+			@keyframes hand{
+				0%{
+					transform:rotate(30deg);
+				}
+				50%{
+					transform:rotate(0deg);
+				}
+				100%{
+					transform:rotate(-45deg);
+				}
+			}
+			@keyframes foot{
+				0%{
+					transform:rotate(30deg);
+				}
+				50%{
+					transform:rotate(0deg);
+				}
+				100%{
+					transform:rotate(-45deg);
+				}
+			}
+			@keyframes run{
+				0%{
+					transform:translateX(-300px);
+				}
+				100%{
+					transform:translateX(1200px);
+				}
+			}
+
+ 
+
+
+
+
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="head"></div>
+			<div class="body"></div>
+			<div class="hand left-hand"></div>
+			<div class="hand right-hand"></div>
+			<div class="foot left-foot"></div>
+			<div class="foot right-foot"></div>
+		</div>
+	</body>
+</html>
