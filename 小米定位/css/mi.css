@@ -1,0 +1,146 @@
+
+
+    body,ul,li{
+            margin: 0;
+            padding: 0;
+        }
+    ul{
+            list-style: none;
+        }
+    a{
+            text-decoration: none;
+      }
+   .banner{
+   	  		position: relative;
+      		width: 1226px;
+      		height: 460px;
+     		 margin: 100px auto 0;
+      		cursor: pointer;
+   }
+   .banner .banner-bgimg .img-special{
+   	  		width: 1226px;
+   }
+   .banner-bgimg li{
+   	        position: absolute;
+   	  		top: 0;
+      		left: 0;
+      		width: 1226px;
+      		height: 460px;
+   }
+   .banner .banner-bgimg .btn-left{
+            position: absolute;
+            width: 42px;
+            height: 70px;
+            top: 50%;
+            margin-top: -35px;
+            background-image: url(../img/item/icon-slides.png);
+            background-repeat: no-repeat;
+            left: 236px;
+            background-position: -84px 0;
+    }
+    .banner .banner-bgimg .btn-left:hover{
+        	background-position: 0 0;
+    } 
+    .banner .banner-bgimg .btn-right{
+            position: absolute;
+            width: 42px;
+            height: 70px;
+            top: 50%;
+            margin-top: -35px;
+            background-image: url(../img/item/icon-slides.png);
+            background-repeat: no-repeat;
+            right: 0;
+            background-position: -126px 0;
+    }
+    .banner-bgimg .btn-right:hover{
+        	background-position: -42px 0;
+    } 
+    .banner .banner-bgimg .btn-small {
+    	position: absolute;
+    	width: 100px;
+    	height: 10px;
+    	right: 35px;
+    	bottom: 35px;
+    	box-sizing: border-box;
+    }
+    .banner .banner-bgimg .btn-small a{
+    	float: right;
+    	width: 6px;
+    	height:6px;
+    	border-radius: 50%;
+    	border:2px solid #61618B;
+    }
+    .banner .banner-bgimg .btn-small a + a{
+    	margin-right: 10px;
+    }
+    .banner .banner-bgimg .btn-small a:hover{
+        background-color: red;	
+    }
+    
+    
+    
+   .banner .menu-list{
+   		position: absolute;
+		width: 236px;
+		height: 460px;
+		background-color: rgba(71,62,78,.2);
+   }
+    .banner .menu-list .items{
+    	margin-top: 20px;
+    }
+    .banner .menu-list .items li{
+        height: 42px;
+        line-height: 42px;
+        padding-left: 30px;
+    }
+    .banner .menu-list .items span{
+    	display: inline-block;
+    	float: left;
+    	color: white;
+    	font-size: 14px;
+    }
+    .banner .menu-list .items  li .symbol{
+    	float: right;
+    	margin-right: 25px;
+    }
+    .banner .menu-list .items  .list-item:hover{
+    	background-color: #FF6700;
+    }
+    .banner .menu-list .items li .content{
+    	width: 990px;
+    	height: 460px;
+    	background-color: 	#F5F5F5;
+    	position:absolute;
+    	top: 0;
+    	left: 236px;
+    	display: none;
+    	border: 1px solid gray;
+    	box-shadow: 1px 1px 10px black;/*外阴影*/
+    }
+    .banner .menu-list .items .list-item:hover .content{
+    	display: block;
+    }
+    .banner .menu-list .items .list-item .content ul{
+    	margin-top: 20px;
+    }
+    .banner .menu-list .items .list-item .content li{
+    	float: left;
+    }
+    .banner .menu-list .items .list-item .content li + li{
+    	margin-left: 50px;
+    }
+    .banner .menu-list .items .list-item .content a{
+    	color: black;
+    }
+    .banner .menu-list .items .list-item .content img{
+    	float: left;
+    }
+    .banner .menu-list .items .list-item .content span{
+    	display: inline-block;
+    	margin-left: 20px;
+    	color: black;
+    	font-size: 14px;
+    }
+    .banner .menu-list .items .list-item .content span:hover{
+    	color: orangered;
+    }

@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业-张寒</title>
+    <style>
+        body,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        ul,
+        ol,
+        li,
+        dl,
+        dt,
+        dd {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        body {
+            perspective: 1000px;
+        }
+
+        .all {
+            position: relative;
+            width: 100%;
+        }
+
+        .wrapper {
+            position: absolute;
+            left: -50px;
+            top: 50px;
+            width: 250px;
+            height: 150px;
+            transform-style: preserve-3d;
+            /* background-color: black; */
+            transform: rotateX(63deg) rotateZ(60deg);
+            animation: fly8 infinite 15s linear;
+            z-index: 999;
+        }
+
+        .fly-wrapper_2 {
+            position: absolute;
+            left: 130px;
+            top: 13px;
+            width: 71px;
+            height: 90px;
+            /* background-color: red; */
+            transform-origin: 0%;
+            animation: fly3 .5s infinite linear alternate;
+        }
+
+        .fly-wrapper {
+            position: absolute;
+            left: 44px;
+            top: 13px;
+            width: 71px;
+            height: 90px;
+            /* background-color: red; */
+            transform-origin: 100% 0;
+            animation: fly2 .5s infinite linear alternate;
+        }
+
+        div.body {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100px;
+            height: 15px;
+            border-radius: 100% 15px 15px 100%;
+            transform: rotate(-90deg) translateX(-60px);
+            background-image: linear-gradient(90deg, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+            background-size: 400%;
+            animation: fly 2s infinite linear;
+            filter: blur(2px);
+        }
+
+        .fly {
+            position: absolute;
+            width: 100px;
+            height: 57px;
+            border-radius: 50%;
+            background-image: linear-gradient(90deg, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+            background-size: 400%;
+            animation: fly 2s infinite linear;
+            opacity: .8;
+            filter: blur(2px);
+        }
+
+        .one {
+            top: -7px;
+            left: -22px;
+            transform: rotate(30deg);
+        }
+
+        .two {
+            left: -10px;
+            top: 40px;
+            transform: rotate(-58deg);
+        }
+
+        .three {
+            top: -5px;
+            left: -5px;
+            transform: rotate(144deg);
+        }
+
+        .four {
+            left: -10px;
+            top: 40px;
+            transform: rotate(-133deg);
+        }
+
+        @keyframes fly8 {
+
+            20% {
+                transform: translate3d(700px, 150px, 0px) rotateX(63deg) rotateZ(60deg);
+            }
+
+            60% {
+                transform: translate3d(700px, 150px, 0px) rotateX(63deg) rotateZ(60deg);
+            }
+
+            100% {
+                transform: translate3d(1200px, 0px, 0px) rotateX(50deg) rotateZ(60deg);
+
+            }
+
+        }
+
+        @keyframes fly2 {
+            0% {
+                transform: rotateY(75deg);
+            }
+
+            100% {
+                transform: rotateY(-10deg);
+            }
+        }
+
+        @keyframes fly3 {
+            0% {
+                transform: rotateY(-75deg);
+            }
+
+            100% {
+                transform: rotateY(10deg);
+            }
+        }
+
+
+        @keyframes fly {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 400% 0;
+            }
+        }
+
+
+
+
+
+
+
+        .flower-wrapper {
+            position: relative;
+            top: 250px;
+            left: 450px;
+            width: 800px;
+            height: 80px;
+            transform: rotateX(-15deg);
+            transform-style: preserve-3d;
+        }
+
+        .flower {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 120px;
+            border: .5px solid rgba(156, 89, 231, 0.7);
+            border-radius: 35% 35% 50% 50%;
+            background-image: linear-gradient(to bottom, rgba(156, 89, 231, 0.7), rgba(98, 100, 255, 0.8) 20%, #333);
+            /* background-image: linear-gradient(to top, #03a9f4, #f441a2, #ffeb3b, #09a8f4); */
+            transform-origin: 50% 100%;
+        }
+
+        .flower1 {
+            width: 70px;
+
+        }
+
+        .f1 {
+            transform: rotateY(0deg) translateZ(30px) rotateX(-15deg);
+            animation: f1 linear infinite 15s;
+
+        }
+
+        @keyframes f1 {
+            22% {
+                transform: rotateY(0deg) translateZ(20px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(0deg) translateZ(20px) rotateX(-20deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(0deg) translateZ(20px) rotateX(-20deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+                filter: blur(1px);
+                background-position: 0 650%;
+            }
+        }
+
+        .f2 {
+            transform: rotateY(90deg) translateZ(20px) rotateX(-15deg);
+            animation: f2 linear infinite 15s;
+        }
+
+        @keyframes f2 {
+            22% {
+                transform: rotateY(90deg) translateZ(20px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(90deg) translateZ(20px) rotateX(-16deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(90deg) translateZ(20px) rotateX(-16deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+                filter: blur(1px);
+            }
+        }
+
+        .f3 {
+            transform: rotateY(180deg) translateZ(20px) rotateX(-15deg);
+            animation: f3 linear infinite 15s;
+        }
+
+        @keyframes f3 {
+            22% {
+                transform: rotateY(180deg) translateZ(20px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(180deg) translateZ(20px) rotateX(-16deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(180deg) translateZ(20px) rotateX(-16deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .f4 {
+            transform: rotateY(270deg) translateZ(20px) rotateX(-15deg);
+            animation: f4 linear infinite 15s;
+        }
+
+        @keyframes f4 {
+            22% {
+                transform: rotateY(270deg) translateZ(30px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(270deg) translateZ(30px) rotateX(-16deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(270deg) translateZ(30px) rotateX(-16deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+
+
+        .flower2 {
+            width: 100px;
+        }
+
+        .f5 {
+            transform: rotateY(45deg) translateZ(50px) rotateX(-15deg);
+            animation: f5 linear infinite 15s;
+        }
+
+        @keyframes f5 {
+            35% {
+                transform: rotateY(45deg) translateZ(50px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(45deg) translateZ(30px) rotateX(-30deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(45deg) translateZ(30px) rotateX(-30deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+
+        .f6 {
+            transform: rotateY(135deg) translateZ(50px) rotateX(-15deg);
+            animation: f6 linear infinite 15s;
+        }
+
+        @keyframes f6 {
+            35% {
+                transform: rotateY(135deg) translateZ(50px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(135deg) translateZ(30px) rotateX(-30deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(135deg) translateZ(30px) rotateX(-30deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+
+        .f7 {
+            transform: rotateY(225deg) translateZ(50px) rotateX(-15deg);
+            animation: f7 linear infinite 15s;
+        }
+
+        @keyframes f7 {
+            35% {
+                transform: rotateY(225deg) translateZ(50px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(225deg) translateZ(30px) rotateX(-30deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(225deg) translateZ(30px) rotateX(-30deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+
+        .f8 {
+            transform: rotateY(315deg) translateZ(50px) rotateX(-15deg);
+            animation: f8 linear infinite 15s;
+        }
+
+        @keyframes f8 {
+            35% {
+                transform: rotateY(315deg) translateZ(50px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(315deg) translateZ(30px) rotateX(-30deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(315deg) translateZ(30px) rotateX(-30deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+
+        .flower3 {
+            width: 75px;
+        }
+
+        .f9 {
+            transform: rotateY(0deg) translateZ(70px) rotateX(-15deg);
+            animation: f9 linear infinite 15s;
+        }
+
+        @keyframes f9 {
+            30% {
+                transform: rotateY(0deg) translateZ(70px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(0deg) translateZ(40px) rotateX(-40deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(0deg) translateZ(40px) rotateX(-40deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .f10 {
+            transform: rotateY(45deg) translateZ(70px) rotateX(-15deg);
+            animation: f10 linear infinite 15s;
+        }
+
+        @keyframes f10 {
+            30% {
+                transform: rotateY(45deg) translateZ(70px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(45deg) translateZ(40px) rotateX(-40deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(45deg) translateZ(40px) rotateX(-40deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .f11 {
+            transform: rotateY(90deg) translateZ(70px) rotateX(-15deg);
+            animation: f11 linear infinite 15s;
+        }
+
+        @keyframes f11 {
+            30% {
+                transform: rotateY(90deg) translateZ(70px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(90deg) translateZ(40px) rotateX(-40deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(90deg) translateZ(40px) rotateX(-40deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .f12 {
+            transform: rotateY(135deg) translateZ(70px) rotateX(-15deg);
+            animation: f12 linear infinite 15s;
+        }
+
+        @keyframes f12 {
+            30% {
+                transform: rotateY(135deg) translateZ(70px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(135deg) translateZ(40px) rotateX(-40deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(135deg) translateZ(40px) rotateX(-40deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .f13 {
+            transform: rotateY(180deg) translateZ(70px) rotateX(-15deg);
+            animation: f13 linear infinite 15s;
+        }
+
+        @keyframes f13 {
+            30% {
+                transform: rotateY(180deg) translateZ(70px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(180deg) translateZ(40px) rotateX(-40deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(180deg) translateZ(40px) rotateX(-40deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .f14 {
+            transform: rotateY(225deg) translateZ(70px) rotateX(-15deg);
+            animation: f14 linear infinite 15s;
+        }
+
+        @keyframes f14 {
+            30% {
+                transform: rotateY(225deg) translateZ(70px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(225deg) translateZ(40px) rotateX(-40deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(225deg) translateZ(40px) rotateX(-40deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .f15 {
+            transform: rotateY(270deg) translateZ(70px) rotateX(-15deg);
+            animation: f15 linear infinite 15s;
+        }
+
+        @keyframes f15 {
+            30% {
+                transform: rotateY(270deg) translateZ(70px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(270deg) translateZ(40px) rotateX(-40deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(270deg) translateZ(40px) rotateX(-40deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .f16 {
+            transform: rotateY(315deg) translateZ(70px) rotateX(-15deg);
+            animation: f16 linear infinite 15s;
+        }
+
+        @keyframes f16 {
+            30% {
+                transform: rotateY(315deg) translateZ(70px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(315deg) translateZ(40px) rotateX(-40deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(315deg) translateZ(40px) rotateX(-40deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .flower4 {
+            width: 100px;
+        }
+
+        .f17 {
+            transform: rotateY(22deg) translateZ(80px) rotateX(-15deg);
+            animation: f17 linear infinite 15s;
+        }
+
+        @keyframes f17 {
+            22% {
+                transform: rotateY(22deg) translateZ(80px) rotateX(-15deg);
+
+            }
+
+            50% {
+                transform: rotateY(22deg) translateZ(40px) rotateX(-50deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(22deg) translateZ(40px) rotateX(-50deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .f18 {
+            transform: rotateY(67deg) translateZ(80px) rotateX(-15deg);
+            animation: f18 linear infinite 15s;
+        }
+
+        @keyframes f18 {
+            22% {
+                transform: rotateY(67deg) translateZ(80px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(67deg) translateZ(40px) rotateX(-50deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(67deg) translateZ(40px) rotateX(-50deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .f19 {
+            transform: rotateY(112deg) translateZ(80px) rotateX(-15deg);
+            animation: f19 linear infinite 15s;
+        }
+
+        @keyframes f19 {
+            22% {
+                transform: rotateY(112deg) translateZ(80px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(112deg) translateZ(40px) rotateX(-50deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(112deg) translateZ(40px) rotateX(-50deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .f20 {
+            transform: rotateY(157deg) translateZ(80px) rotateX(-15deg);
+            animation: f20 linear infinite 15s;
+        }
+
+        @keyframes f20 {
+            22% {
+                transform: rotateY(157deg) translateZ(80px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(157deg) translateZ(40px) rotateX(-50deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(157deg) translateZ(40px) rotateX(-50deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .f21 {
+            transform: rotateY(202deg) translateZ(80px) rotateX(-15deg);
+            animation: f21 linear infinite 15s;
+        }
+
+        @keyframes f21 {
+            22% {
+                transform: rotateY(202deg) translateZ(80px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(202deg) translateZ(40px) rotateX(-50deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(202deg) translateZ(40px) rotateX(-50deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .f22 {
+            transform: rotateY(247deg) translateZ(80px) rotateX(-15deg);
+            animation: f22 linear infinite 15s;
+        }
+
+        @keyframes f22 {
+            22% {
+                transform: rotateY(247deg) translateZ(80px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(247deg) translateZ(40px) rotateX(-50deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(247deg) translateZ(40px) rotateX(-50deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .f23 {
+            transform: rotateY(292deg) translateZ(80px) rotateX(-15deg);
+            animation: f23 linear infinite 15s;
+        }
+
+        @keyframes f23 {
+            22% {
+                transform: rotateY(292deg) translateZ(80px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(292deg) translateZ(40px) rotateX(-50deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(292deg) translateZ(40px) rotateX(-50deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .f24 {
+            transform: rotateY(337deg) translateZ(80px) rotateX(-15deg);
+            animation: f24 linear infinite 15s;
+        }
+
+        @keyframes f24 {
+            22% {
+                transform: rotateY(337deg) translateZ(80px) rotateX(-15deg);
+            }
+
+            50% {
+                transform: rotateY(337deg) translateZ(40px) rotateX(-50deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-size: 300% 300%;
+
+            }
+
+            100% {
+                transform: rotateY(337deg) translateZ(40px) rotateX(-50deg);
+                background-image: linear-gradient(to bottom, #03a9f4, #f441a2, #ffeb3b, #09a8f4);
+                background-position: 0 650%;
+                background-size: 300% 300%;
+
+                filter: blur(1px);
+            }
+        }
+
+        .line {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 20px;
+            height: 400px;
+            background-color: green;
+            background-image: linear-gradient(to right, white, green 20%, green 50%, black);
+        }
+
+        .leaf {
+            position: absolute;
+            top: 250px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 280px;
+            width: 180px;
+            border-radius: 54% 54% 50% 50%;
+            background-image: linear-gradient(to top, rgba(130, 213, 22), rgba(80, 165, 39));
+            transform-origin: 50% 0%;
+        }
+
+        .l1 {
+            transform: rotateY(252deg) translateZ(10px) rotateX(80deg) rotateZ(2deg);
+            animation: leaf  1.5s  infinite linear alternate;
+        }
+        @keyframes leaf { 
+            100%{
+                transform: rotateY(252deg) translateZ(10px) rotateX(87deg) rotateZ(2deg);
+            }
+            
+        }
+        .l2 {
+            transform: rotateY(85deg) translateZ(11px) rotateX(83deg);
+            animation: leaf2  1.5s  infinite linear alternate;
+        }
+        @keyframes leaf2 { 
+            100%{
+                transform: rotateY(85deg) translateZ(11px) rotateX(89deg);
+            }
+            
+        }
+        .l1::before {
+            position: absolute;
+            left: 62px;
+            content: "";
+            height: 240px;
+            width: 90px;
+            /* border-top: 1px solid rgba(0, 0, 0,.3); */
+            border-left: 1px solid rgba(0, 0, 0, .3);
+            border-radius: 100%;
+        }
+
+        .l2::before {
+            position: absolute;
+            left: 28px;
+            content: "";
+            height: 240px;
+            width: 90px;
+            /* border-top: 1px solid rgba(0, 0, 0,.3); */
+            border-right: 1px solid rgba(0, 0, 0, .3);
+            border-radius: 100%;
+        }
+
+        .bgc {
+            position: absolute;
+            width: 100%;
+            height: 1000px;
+            background: linear-gradient(-45deg, #0acf00 60%, #78C9DB 60%);
+            background-size: 35px 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+
+        <div class="bgc">
+            <div class="wrapper">
+                <div class="fly-wrapper">
+                    <div class="fly one"></div>
+                    <div class="fly two"></div>
+                    <div class="fly one "></div>
+                    <div class="fly two"></div>
+                </div>
+                <div class="body">
+                </div>
+                <div class="fly-wrapper_2">
+                    <div class="fly three"></div>
+                    <div class="fly four"></div>
+                </div>
+            </div>
+
+            <div class="flower-wrapper">
+                <div class="flower flower1 f1"></div>
+                <div class="flower flower1 f2"></div>
+                <div class="flower flower1 f3"></div>
+                <div class="flower flower1 f4"></div>
+                <div class="flower flower2 f5"></div>
+                <div class="flower flower2 f6"></div>
+                <div class="flower flower2 f7"></div>
+                <div class="flower flower2 f8"></div>
+                <div class="flower flower3 f9"></div>
+                <div class="flower flower3 f10"></div>
+                <div class="flower flower3 f11"></div>
+                <div class="flower flower3 f12"></div>
+                <div class="flower flower3 f13"></div>
+                <div class="flower flower3 f14"></div>
+                <div class="flower flower3 f15"></div>
+                <div class="flower flower3 f16"></div>
+                <div class="flower flower4 f17"></div>
+                <div class="flower flower4 f18"></div>
+                <div class="flower flower4 f19"></div>
+                <div class="flower flower4 f20"></div>
+                <div class="flower flower4 f21"></div>
+                <div class="flower flower4 f22"></div>
+                <div class="flower flower4 f23"></div>
+                <div class="flower flower4 f24"></div>
+                <div class="leaf l1"></div>
+                <div class="leaf l2"></div>
+                <div class="line"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

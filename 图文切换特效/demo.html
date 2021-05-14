@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title>首页</title>
+  <meta name='keywords' content='关键词1,关键词2'>
+  <meta name='description' content='欢迎大家来到web基础教室'>
+  <style>
+	*{margin:0;padding:0}
+	.box{
+		width:660px;
+		height:460px;
+		margin:100px auto;
+		box-shadow:0px 0px 10px 0px;
+	}
+	.box ul{
+		list-style:none;
+		font-size:0;
+	}
+	.box ul li{
+		position: relative;
+		display:inline-block;
+		width:220px;
+		height:220px;
+		margin-bottom:20px;
+		background:#333;
+		font-size:16px;
+		border-radius:50%;
+	} 
+	.box ul li.on{
+		margin-right:220px;
+	}
+	.box ul li h3{
+		line-height:120px; 
+		color:#fff;
+		text-align:center;
+	}
+	.box ul li p{
+		color:#fff;
+		text-align:center;
+		font-weight:600;
+	}
+	.box ul li img{
+		position: absolute;
+		top: 0;
+		width:220px;
+		height:220px;
+		border-radius:50%;
+		transform-origin:95% 40%;
+		transition:.5s;
+	}
+	.box ul li .left{
+		transform-origin:5% 40%;
+	}
+	.box ul li:hover img{
+		transform:rotate(-150deg);
+	}
+	.box ul li:hover .left{
+		transform:rotate(150deg);
+	}
+  </style>
+</head>
+<body><!--用户能够看到的区域-->
+	<div class="box">
+		<ul>
+			<li class='on'>
+				<h3>桃花花语</h3>
+				<p>爱情的俘虏</p>
+				<img src='images/1.jpg' width='300' height='300' alt='桃花'>
+			</li>
+			<li>
+				<h3>薰衣草花语</h3>
+				<p>等待爱情</p>
+				<img src='images/2.jpg' width='300' height='300' alt='薰衣草'>
+			</li>
+			<li class='on'>
+				<h3>梅花花语</h3>
+				<p>坚强与高贵</p>
+				<img class='left' src='images/3.jpg' width='300' height='300' alt='梅花'>
+			</li>
+			<li>
+				<h3>油菜花花语</h3>
+				<p>come on 加油!</p>
+				<img class='left' src='images/4.jpg' width='300' height='300' alt='油菜花'>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

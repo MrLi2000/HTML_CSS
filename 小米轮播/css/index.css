@@ -1,0 +1,64 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.banner{
+  		position: relative;
+  		width: 1226px;
+  		height: 460px;
+ 		margin: 100px auto 0;
+ 		overflow: hidden;
+}
+ul{
+	width: 6130px;
+	height: 460px;
+    position:absolute;
+    top:0px;
+    left: 0;
+    animation: run 9s infinite;
+    list-style: none;
+}
+li{
+	float: left;
+	width: 1226px;
+	height: 460px;
+	background-size: 1226px 460px;
+}
+li:nth-child(1){
+	background-image: url(../img/1.webp);
+}
+li:nth-child(2){
+	background-image: url(../img/2.webp);
+}
+
+li:nth-child(3){
+	background-image: url(../img/3.webp);
+}
+
+li:nth-child(4){
+	background-image: url(../img/4.webp);
+}
+li:nth-child(5){
+	background-image: url(../img/1.webp);
+}
+
+@keyframes run{
+ 	0%{
+ 		left: 0;
+ 		
+ 	}
+ 	25%{
+ 		left: -1226px;
+ 		
+ 	}
+ 	50%{
+ 		left: -2452px;
+ 		
+ 	}
+ 	75%{
+ 		left: -3678px;
+ 	}
+ 	100%{
+ 		left: -4904px;
+ 	}
+}

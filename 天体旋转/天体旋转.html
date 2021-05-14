@@ -1,0 +1,112 @@
+﻿<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS3地球绕太阳转动场景动画特效</title>
+
+  <style>
+    body {
+      background-color: #20202c;
+      height: 100vh;
+    }
+
+    #container {
+      position: absolute;
+      top: calc(50% - 200px);
+      left: calc(50% - 200px);
+      height: 400px;
+      width: 400px;
+      /* background-color: pink; */
+    }
+
+    #container #sun {
+      position: absolute;
+      top: 150px;
+      left: 150px;
+      height: 100px;
+      width: 100px;
+      background-color: yellow;
+      border-radius: 50%;
+      box-shadow: 0 0 30px white;
+    }
+
+    #container .orbit {
+      position: absolute;
+      border-width: 3px;
+      border: solid;
+      border-color: white transparent transparent transparent;
+      border-radius: 50%;
+    }
+
+
+    #container .orbit#earth-orbit {
+      left: 50px;
+      top: 50px;
+      width: 300px;
+      height: 300px;
+      animation: orbit 10.5s linear infinite;
+    }
+
+
+
+    #container .orbit#moon-orbit {
+      left: -25px;
+      top: -25px;
+      height: 80px;
+      width: 80px;
+      animation: orbit 1.7s linear infinite;
+    }
+
+    #container .orbit .globe {
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    #container .orbit .globe#earth {
+      right: 28px;
+      top: 28px;
+      width: 30px;
+      height: 30px;
+      background: aqua;
+    }
+
+
+    #container .orbit .globe#moon {
+      right: 2px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      background: #d6d6d6;
+    }
+
+
+    @keyframes orbit {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="container">
+    <div id="sun"></div>
+    <div class="orbit" id="earth-orbit">
+      <div class="globe" id="earth">
+        <div class="orbit" id="moon-orbit">
+          <div class="globe" id="moon"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
