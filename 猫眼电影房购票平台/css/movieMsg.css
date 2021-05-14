@@ -1,0 +1,50 @@
+
+
+
+
+
+
+
+      .movieMsg{
+      	width: 732px;
+      	height: 552px;
+      	margin:  100px auto 100px auto;
+      }
+      .movieMsg ul{
+      	list-style: none;
+      	padding: 0;
+      	
+      }
+      .movieMsg ul  li{
+      	float: left;
+      	margin-right: 28px;
+      	margin-bottom: 28px;
+      	width: 160px;
+      	height: 260px;
+      	border: 1px solid #ccc;
+      }
+      /*nth-child(4) 选择第几个子元素*/
+      .movieMsg ul li:nth-child(4){
+      	margin-right: 0px;
+      }
+      .movieMsg ul li:nth-child(8){
+      	margin-right: 0px;
+      }
+      
+      
+      .pic img{
+      	width: 160px;
+      	height: 220px;
+      }
+      .btn{
+      	width: 160px;
+      	height: 40px;
+      	text-align:center;/*文本居中*/
+      	line-height:40px;
+      	font-size: 14px;
+      	color: red;
+      }
+      .btn:hover{
+      	background-color: red;
+      	color: #fff;
+      }

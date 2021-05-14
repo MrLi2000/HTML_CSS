@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .firefox{
+            width: 156px;
+            height: 156px;
+            background:url(./images/foxtail.png);
+            animation: fire .5s steps(45) infinite;
+        }
+
+        @keyframes fire {
+            from{
+                background-position-x:0 ;
+            }
+            to{
+                background-position-x:-7020px ;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="firefox"></div>
+</body>
+</html>

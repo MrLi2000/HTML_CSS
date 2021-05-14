@@ -1,0 +1,49 @@
+
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	background-color: #000;
+}
+.wrapper{
+	position: relative;
+	width: 500px;
+	height: 500px;
+	margin: 100px auto 0;
+	background-color: #000;
+	filter:blur(10px) contrast(80);
+}
+
+.wrapper .ball{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: #fff;
+	margin: auto;
+	
+}
+ .ball-1{
+	transform: translateX(-150px);
+}
+ .ball-3{
+	transform: translateX(150px);
+}
+ .ball-2{
+	animation: run 1s linear infinite alternate;
+}
+@keyframes run{
+	0%{
+		box-shadow: 350px 0 0 #fff;
+	}
+	100%{
+		box-shadow: -350px 0 0 #fff;
+	}
+}
+
