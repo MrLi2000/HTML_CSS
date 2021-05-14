@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<meta name = "keywords" content="乖乖 ,乖乖老师" >
+		<meta name = "description" content=" 这是乖乖老师的讲课网页">
+		<title>六星的乖乖</title>
+		<style>
+			body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd{
+				margin:0;
+				padding:0;
+			}
+			a{
+				text-decoration:none;
+			}
+			ul,ol{
+				list-style:none;
+			}
+			.moviemessage{
+				width: 1200px;
+				height: 300px;
+				margin:100px auto 0;
+
+				/* background-color: pink; */
+			}
+			.messagelist{
+				float: left;
+				perspective:1000px;
+				width: 300px;
+				height: 300px;
+				margin-right:20px;
+			}
+			.listpic{
+				position: absolute;
+				width: 300px;
+				height: 300px;
+				transform:rotateY(0deg);
+				transition:  0.5s;
+			}
+			.listtext{
+				/*一开始是90度 目的是有个动画到0度的*/
+				transform:rotateY(90deg);
+				width: 300px;
+				height: 300px;
+				background-color: rgba(0,0,0,.7);
+				transition:  0.5s;
+			}
+			.listtext p{
+				color:#fff;
+				text-align: center;
+				padding-top:90px;
+			}
+
+			.messagelist:hover .listpic{
+				transform:rotateY(-90deg);
+			}
+			.messagelist:hover .listtext{
+				transform:rotateY(0deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="moviemessage">
+			<div class="messagelist">
+				<div class="listpic">
+					<img src="images/1.jpg" alt="">
+				</div>
+				<div class="listtext">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae libero orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed vestibulum.</p>
+				</div>
+			</div>
+			<div class="messagelist">
+				<div class="listpic">
+					<img src="images/2.jpg" alt="">
+				</div>
+				<div class="listtext">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae libero orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed vestibulum.</p>
+				</div>
+			</div>
+			<div class="messagelist">
+				<div class="listpic">
+					<img src="images/3.jpg" alt="">
+				</div>
+				<div class="listtext">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae libero orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed vestibulum.</p>
+				</div>
+			</div>
+		
+		
+		</div>
+	</body>
+</html>
