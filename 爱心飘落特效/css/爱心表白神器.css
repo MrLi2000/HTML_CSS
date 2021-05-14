@@ -1,0 +1,48 @@
+
+body{
+	margin: 0px;/*清除默认外边距*/
+	background-image: url(../img/杨颖.jpeg);
+	background-size: cover;/*自适应缩小*/
+	overflow: hidden;/*隐藏超出部分*/
+}
+
+
+.snowfall-flakes::before{/*伪元素*/
+	content: ""; 
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 10px;
+	height: 16px;
+	background-color: red;
+	border-radius: 5px 5px 0px 0px;/*圆角属性-- 左上、右上、右下、左下*/
+	transform: rotate(-45deg);/* 变换 旋转 deg=角度*/
+}
+
+.snowfall-flakes::after{
+	content: "";
+	position:absolute;
+	/*绝对定位*/
+	left: 0;
+	top:0;
+	
+	width: 10px;
+	height: 16px;
+	background-color: red;
+	border-radius: 5px 5px 0px 0px;/*圆角属性-- 左上、右上、右下、左下*/
+	transform: translateX(4.3px) rotate(45deg);/* 变换 旋转 deg=角度    translateX=位移*/
+}
+
+
+
+
+/*
+.heart{
+	position: relative;
+	/*相对定位*/
+	width: 200px;
+	height: 200px;
+	background-color: pink;
+	margin: 100px auto 100px auto;
+	/*盒子移动正中央    --auto:自适应居中*/
+/*}*/

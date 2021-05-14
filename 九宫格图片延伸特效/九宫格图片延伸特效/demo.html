@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<title></title>
+	<meta name='keywords' content='关键词1,关键词2'>
+	<meta name='description' content='欢迎大家来到web基础教室'>
+	<style>
+		* {
+			margin: 0;
+			padding: 0
+		}
+
+		body {
+
+			background-image: url('images/bg.jpg');
+		}
+
+		.wrap {
+			width: 930px;
+			height: 500px;
+			margin: 100px auto;
+			background-color: #fff;
+		}
+
+		.wrap ul {
+			display: flex;
+			flex-wrap: wrap;
+			/* justify-content:space-around;
+			align-items:center; */
+			list-style: none;
+			height: 500px;
+			/* background-color:yellow; */
+		}
+
+		.wrap ul li {
+			position: relative;
+			width: 300px;
+			height: 160px;
+			margin: auto;
+			/* background-color:blue; */
+		}
+
+		.wrap ul li img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			transition: .5s;
+		}
+
+		.wrap ul li:nth-child(1):after {
+			content: 'SEO课程';
+		}
+
+		.wrap ul li:nth-child(2):after {
+			content: '淘宝美工课程';
+		}
+
+		.wrap ul li:nth-child(3):after {
+			content: '淘宝摄像课程';
+		}
+
+		.wrap ul li:nth-child(1):after {
+			content: 'SEO课程';
+		}
+
+		.wrap ul li:nth-child(2):after {
+			content: '淘宝美工课程';
+		}
+
+		.wrap ul li:nth-child(3):after {
+			content: '淘宝摄像课程';
+		}
+
+		.wrap ul li:nth-child(4):after {
+			content: 'JAVA、C++、IOS';
+		}
+
+		.wrap ul li:nth-child(5):after {
+			content: '前端课程体系';
+		}
+
+		.wrap ul li:nth-child(6):after {
+			content: '平面设计课程';
+		}
+
+		.wrap ul li:nth-child(7):after {
+			content: '网络营销课程';
+		}
+
+		.wrap ul li:nth-child(8):after {
+			content: '室内设计课程';
+		}
+
+		.wrap ul li:nth-child(9):after {
+			content: '八大外语课程';
+		}
+
+		.wrap ul li:after {
+			position: absolute;
+			width: 300px;
+			height: 160px;
+			background: rgba(0, 0, 0, .8);
+			opacity: 0;
+			color: #fff;
+			font-size: 20px;
+			text-align: center;
+			line-height: 160px;
+			transition: .5s;
+		}
+
+		.wrap ul li:hover:after {
+			opacity: 1;
+		}
+
+		.wrap ul li img:not(.current) {
+			opacity: 0;
+		}
+
+		.wrap ul li:hover img:not(.current) {
+			z-index: 1;
+			opacity: 1;
+		}
+
+		.wrap ul li:hover img.right {
+			left: 310px;
+		}
+
+		.wrap ul li:hover img.bottom {
+			top: 167px;
+		}
+
+		.wrap ul li:hover img.left {
+			left: -310px;
+		}
+
+		.wrap ul li:hover img.top {
+			top: -167px;
+		}
+	</style>
+</head>
+
+<body>
+	<!--用户能够看到的区域-->
+	<div class='wrap'>
+		<ul>
+			<li>
+				<img class='current' src="images/img1.png" alt="">
+				<img class='right' src="images/seob.jpg" alt="">
+				<img class='bottom' src="images/seor.jpg" alt="">
+			</li>
+			<li>
+				<img class='current' src="images/img2.png" alt="">
+				<img class='left' src="images/taob.jpg" alt="">
+				<img class='bottom' src="images/taol.jpg" alt="">
+				<img class='right' src="images/taor.jpg" alt="">
+			</li>
+			<li>
+				<img class='current' src="images/img3.png" alt="">
+				<img class='left' src="images/syb.jpg" alt="">
+				<img class='bottom' src="images/syl.jpg" alt="">
+			</li>
+			<li>
+				<img class='current' src="images/img4.png" alt="">
+				<img class='bottom' src="images/jb.jpg" alt="">
+				<img class='right' src="images/jr.jpg" alt="">
+				<img class='top' src="images/jt.jpg" alt="">
+			</li>
+			<li>
+				<img class='current' src="images/img5.png" alt="">
+				<img class='bottom' src="images/jb.jpg" alt="">
+				<img class='right' src="images/jr.jpg" alt="">
+				<img class='top' src="images/jt.jpg" alt="">
+				<img class='left' src="images/syb.jpg" alt="">
+			</li>
+			<li>
+				<img class='current' src="images/img6.png" alt="">
+				<img class='bottom' src="images/jb.jpg" alt="">
+				<img class='left' src="images/syb.jpg" alt="">
+				<img class='top' src="images/jt.jpg" alt="">
+			</li>
+			<li>
+				<img class='current' src="images/img7.png" alt="">
+				<img class='right' src="images/jr.jpg" alt="">
+				<img class='top' src="images/jt.jpg" alt="">
+			</li>
+			<li>
+				<img class='current' src="images/img8.png" alt="">
+				<img class='left' src="images/taob.jpg" alt="">
+				<img class='top' src="images/taol.jpg" alt="">
+				<img class='right' src="images/taor.jpg" alt="">
+			</li>
+			<li>
+				<img class='current' src="images/img9.png" alt="">
+				<img class='left' src="images/taob.jpg" alt="">
+				<img class='top' src="images/taol.jpg" alt="">
+			</li>
+		</ul>
+	</div>
+</body>
+
+</html>
