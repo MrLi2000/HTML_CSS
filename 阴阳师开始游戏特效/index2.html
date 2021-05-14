@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: url("./images/bg1.jpg") no-repeat center/cover;
+        }
+
+        .wrap {
+            width: 205px;
+            height: 205px;
+            margin: 200px auto 0;
+            background: url("./images/1.png") no-repeat -405px -153px;
+        }
+
+        .wrap::before{
+            content: "";
+            display: block;
+            width: 205px;
+            height: 205px;
+            background: url("./images/1.png") no-repeat -405px -153px;
+        }
+
+        .wrap:hover::before{
+            animation: move 1s linear infinite;
+        }
+
+        @keyframes move {
+            from{
+                opacity: 1;
+                transform: scale(1);
+            }
+            to{
+                opacity: .3;
+                transform: scale(2);
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap"></div>
+</body>
+
+</html>
