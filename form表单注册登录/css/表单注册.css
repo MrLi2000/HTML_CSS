@@ -1,0 +1,17 @@
+
+      *{
+      	margin: 0px;
+      }
+      div.login{
+      	margin: 100px auto;
+      	text-align: center;
+      	width: 400px;
+      	height: 100px;
+      	background-color: green;
+      }
+      h2{
+      	text-align: center;
+      	color: white;
+      	letter-spacing: 4px;/*文本间间距*/
+      	text-transform: uppercase;/*文本变大写*/
+      }
