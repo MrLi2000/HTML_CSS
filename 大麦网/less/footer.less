@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+.footer{
+    width: 100%;
+    background-color: #F8F8F8;
+    margin-top: 30px;
+    .footer-content{
+        width: 1200px;
+        height:350px;
+        margin: 0 auto;
+        .footer-nav{
+            width: 100%;
+            height: 90px;
+            ul{
+                width: 100%;
+                height: 90px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                li{
+                    color: #111;
+                }
+                li + li{
+                    margin-left: 20px;
+                }
+                li:nth-child(odd) > a:hover{
+                    color: #ff1268;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .footer-msg{
+            width: 100%;
+            height: 260px;
+            display: flex;
+            .msg-left{
+                width:300px;
+                height:100%;
+                margin-right: 100px;
+                display: flex;
+                justify-content: space-between;
+                a{
+                    img{
+                        width: 167px;
+                        height: 60px;
+                    }
+                }
+                .erweima{
+                    img{
+                        width: 87px;
+                        height: 87px;
+                    }
+                    span{
+                        display: block;
+                        text-align: center;
+                        margin-top: 8px;
+                    }
+                }
+            }
+            .msg-right{
+                width: 800px;
+                height: 100%;
+                .kefu{
+                    width: 100px;
+                    height: 25px;
+                    background-color: #FF1268;
+                    border-radius: 20px;
+                    text-align: center;
+                    a{
+                        color: white;
+                        line-height: 25px;
+                    }
+                }
+                .other-msg{
+                    height: 130px;
+                    width: 100%;
+                    margin-top: 15px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    ul{
+                        width: 100%;
+                        height: 20px;
+                        display: flex;
+                        color: #111;
+                        li + li{
+                            margin-left: 10px;
+                        }
+                          
+                    }
+                    ul.other1 > li > a:nth-child(odd):hover,ul.other2 > li > a:nth-child(odd):hover{
+                        color: #ff1268;
+                    }
+                    
+                    
+                }
+
+            }
+        }
+        .footer-imgs{
+            width: 100%;
+            display: flex;
+            a{
+                img{
+                    height: 30px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
